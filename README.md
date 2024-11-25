@@ -7,4 +7,6 @@ Splunk is a Security Information and Event Management (SIEM) platform designed f
 
 Components
 Splunk consists of three main components, an Indexer, Search Head, and Forwarder
-1) Splunk Forwarder essentialy sends or "forwards" information from the traffic on a network and
+1) Splunk Forwarder essentialy sends or "forwards" information from the traffic on a network and sends it to the Splunk instance. Note: This includes web server traffic, windows logs and linux logs.
+2) Splunk Indexer Recieved the information from the forwarder and "normalizes" for humans to be able to read them by determining the data type and stores them as events. These events are then easy to search for and analyze.
+3) Splunk Search head is basically a way to search for the data/events that Splunk Indexer stores. This search tool uses a languange that is specific to splunk called SPL
